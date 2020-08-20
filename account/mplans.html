@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <meta name="description" content=""/>
+  <meta name="author" content=""/>
+  <title>Birexoption | Main Plans</title>
+  <!--favicon-->
+  <link rel="icon" href="../rocker/color-version/assets/images/favicon.ico" type="image/x-icon"/>
+  <!-- Vector CSS -->
+  <link href="../rocker/color-version/assets/plugins/vectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet"/>
+  <!-- simplebar CSS-->
+  <!--inputtags-->
+  <link href="../rocker/color-version/assets/plugins/inputtags/css/bootstrap-tagsinput.css" rel="stylesheet" />
+  <link href="../rocker/color-version/assets/plugins/simplebar/css/simplebar.css" rel="stylesheet"/>
+  <!-- Bootstrap core CSS-->
+  <link href="../rocker/color-version/assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/datatables/datatables.css" rel="stylesheet" />
+  <!-- animate CSS-->
+  <link href="../rocker/color-version/assets/css/animate.css" rel="stylesheet" type="text/css"/>
+  <!-- Icons CSS-->
+  <link href="../rocker/color-version/assets/css/icons.css" rel="stylesheet" type="text/css"/>
+  <!-- Sidebar CSS-->
+  <link href="../rocker/color-version/assets/css/sidebar-menu.css" rel="stylesheet"/>
+  <!-- Custom Style-->
+  <link href="../rocker/color-version/assets/css/app-style.css" rel="stylesheet"/>
+
+
+<script src="//code.tidio.co/cqra3sttwnzs1wek7f1ki6rnflnwwfal.js"></script>
+
+<style>
+.pagination li {
+     color: #fff !important;
+    padding: 6px 9px !important;
+    background: #150847 !important;
+    border-color: #fff !important;
+    border-style: solid;
+}
+.pagination li:hover {
+    background: #F79319 !important;
+    }
+
+</style>
+</head>
+<body class="">
+    
+    <div class="modal fade" id="verifyModal">
+                  <div class="modal-dialog">
+                    <div class="modal-content animated zoomInUp">
+                      <div class="modal-header">
+                        <h5 class="modal-title"><i class="fa fa-star"></i> KYC verification - Upload documents below to get verified.</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <form style="padding:3px;" role="form" method="post" action=""  enctype="multipart/form-data">
+                            <label>Valid identity card. (e.g. Drivers licence, international passport or any government approved document).</label>
+                            <input type="file" name="id" required><br><hr>
+					   		<label>Passport photogragh</label><br>
+                            <input type="file" name="passport" required><br>
+                               
+					   		<input type="hidden" name="_token" value="YZOHWbPmIw2R4UvVEMga2W6LAsksZRsna9vF3em2"><br>
+					   
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Submit Documents</button>
+                      </div>
+                      </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Deposit Modal -->
+			<div id="depositModal" class="modal fade" role="dialog">
+			  <div class="modal-dialog">
+
+			    <!-- Modal content-->
+			    <div class="modal-content animated zoomIn">
+			      <div class="modal-header">
+			        
+			        <h4 class="modal-title" style="text-align:center;">Make new deposit</h4>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+			      </div>
+			      <div class="modal-body">
+                        <form style="padding:3px;" role="form" method="post" action="deposit.html">
+					   		<input style="padding:5px;" class="form-control" placeholder="Enter amount here" type="text" name="amount" required><br/>
+                               
+					   		<input type="hidden" name="_token" value="YZOHWbPmIw2R4UvVEMga2W6LAsksZRsna9vF3em2">
+					   		<div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Continue</button>
+                      </div>
+					   </form>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<!-- /deposit Modal -->
+			
+        <!--PayPal-->
+    <script>
+    
+    // Add your client ID and secret
+    var PAYPAL_CLIENT = '';
+    var PAYPAL_SECRET = '';
+    
+    // Point your server to the PayPal API
+    var PAYPAL_ORDER_API = 'https://api.paypal.com/v2/checkout/orders/';
+
+    </script>
+    
+    <script
+    src="https://www.paypal.com/sdk/js?client-id=">
+  </script>
+  
+  <!--/PayPal-->
+	
+<!--Start of Tawk.to Script-->
+
+<script type="text/javascript">
+$(document).ready(function () {
+  $('#dtBasicExample').DataTable();
+  $('.dataTables_length').addClass('bs-select');
+});
+</script>
+
+<script type="text/javascript">
+{}
+
+</script>
+<!--End of Tawk.to Script-->
+<!-- Start wrapper-->
+ <div id="wrapper">
+   <!--Start sidebar-wrapper-->
+   <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
+     <div class="brand-logo">
+      <a href="index.html">
+       <a href="https://Birexoption.com"><h5 class="logo-text" title="Go to Homepage">Birexoption</h5></a>
+     </a>
+   </div>
+   <ul class="sidebar-menu do-nicescrol">
+      <li class="sidebar-header">MAIN NAVIGATION</li>
+      <li>
+        <a href="dashboard.html" class="waves-effect">
+          <i class="icon-home"></i> <span>Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="javaScript:void();" class="waves-effect">
+          <i class="fa fa-user"></i>
+          <span>Account</span> <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="sidebar-submenu">
+        <li><a href="profile.html"><i class="fa fa-circle-o"></i> Profile</a></li>
+        <li><a href="accountdetails.html"><i class="fa fa-circle-o"></i> Withdrawal Settings</a></li>
+        <li><a href="changepassword.html"><i class="fa fa-circle-o"></i> Change Password</a></li>
+        
+        </ul>
+      </li>
+      <li>
+        <a href="withdrawals.html" class="waves-effect">
+          <i class="fa fa-money"></i> <span>withdraw profit</span>
+        </a>
+      </li>
+      <li>
+        <a href="mplans.html" class="waves-effect">
+          <i class="fa fa-money"></i> <span>Investment</span>
+        </a>
+      </li>
+      <li>
+        <a href="tradinghistory.html" class="waves-effect">
+          <i class="fa fa-reload fa-history"></i> <span>Trade History</span>
+        </a>
+      </li>
+      <li>
+        <a href="support.html" class="waves-effect">
+          <i class="fa fa-support"></i> <span>Support</span>
+        </a>
+      </li>
+      <li>
+        <a href="deposits.html" class="waves-effect">
+          <i class="icon-wallet"></i> <span>Deposit</span>
+        </a>
+      </li>
+      <li>
+        <a href="referuser.html" class="waves-effect">
+          <i class="fa fa-share"></i> <span>Refer Users</span>
+        </a>
+      </li>
+    </ul>
+   </div>
+   <!--End sidebar-wrapper-->
+<!--Start topbar header-->
+<header class="topbar-nav">
+ <nav class="navbar navbar-expand fixed-top gradient-scooter">
+  <ul class="navbar-nav mr-auto align-items-center">
+    <li class="nav-item">
+      <a class="nav-link toggle-menu" href="javascript:void();">
+       <i class="icon-menu menu-icon"></i>
+     </a>
+    </li>
+    <li class="nav-item">
+                  <button type="button" class="btn btn-success btn-sm waves-effect waves-light m-1" title="Account Balance" data-toggle="modal" data-target="#depositModal"> <i class="fa fa-dollar"></i> <span>50.00</span></button>
+    </li>
+<li class="nav-item">
+                  <a href="logout.html"
+                        onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();"><button type="button" class="btn btn-danger waves-effect btn-sm waves-light m-1" title="Logout"> <i class="fa fa-lock"></i> <span>
+                        Logout
+                    	</span></button></a>
+<form id="logout-form" action="logout.html" method="POST" style="display: none;">
+                        <input type="hidden" name="_token" value="YZOHWbPmIw2R4UvVEMga2W6LAsksZRsna9vF3em2">
+         </form>
+    </li>
+  </ul>
+  <ul class="navbar-nav align-items-center right-nav-link">
+    <li class="nav-item dropdown-lg">
+      <a class="nav-link waves-effect" href="notification.html">
+	    <span><i class="icon-envelope-open"></i></span></a>
+    </li>
+    <!--<li class="nav-item dropdown-lg">
+      <a class="nav-link dropdown-toggle dropdown-toggle-nocaret waves-effect" data-toggle="dropdown" href="javascript:void();">
+	  <i class="icon-bell"></i><span class="badge badge-primary badge-up">10</span></a>
+      <div class="dropdown-menu dropdown-menu-right">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+          You have 10 Notifications
+          <span class="badge badge-primary">10</span>
+          </li>
+          <li class="list-group-item">
+          <a href="javaScript:void();">
+           <div class="media">
+             <i class="icon-people fa-2x mr-3 text-info"></i>
+            <div class="media-body">
+            <h6 class="mt-0 msg-title">New Registered Users</h6>
+            <p class="msg-info">Lorem ipsum dolor sit amet...</p>
+            </div>
+          </div>
+          </a>
+          </li>
+          <li class="list-group-item">
+          <a href="javaScript:void();">
+           <div class="media">
+             <i class="icon-cup fa-2x mr-3 text-warning"></i>
+            <div class="media-body">
+            <h6 class="mt-0 msg-title">New Received Orders</h6>
+            <p class="msg-info">Lorem ipsum dolor sit amet...</p>
+            </div>
+          </div>
+          </a>
+          </li>
+          <li class="list-group-item">
+          <a href="javaScript:void();">
+           <div class="media">
+             <i class="icon-bell fa-2x mr-3 text-danger"></i>
+            <div class="media-body">
+            <h6 class="mt-0 msg-title">New Updates</h6>
+            <p class="msg-info">Lorem ipsum dolor sit amet...</p>
+            </div>
+          </div>
+          </a>
+          </li>
+          <li class="list-group-item"><a href="javaScript:void();">See All Notifications</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item language">
+      <a class="nav-link dropdown-toggle dropdown-toggle-nocaret waves-effect" data-toggle="dropdown" href="#"><i class="flag-icon flag-icon-gb"></i></a>
+      <ul class="dropdown-menu dropdown-menu-right">
+          <li class="dropdown-item"> <i class="flag-icon flag-icon-gb mr-2"></i> English</li>
+          <li class="dropdown-item"> <i class="flag-icon flag-icon-fr mr-2"></i> French</li>
+          <li class="dropdown-item"> <i class="flag-icon flag-icon-cn mr-2"></i> Chinese</li>
+          <li class="dropdown-item"> <i class="flag-icon flag-icon-de mr-2"></i> German</li>
+        </ul>
+    </li>-->
+    <li class="nav-item dropdown-lg">
+      <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown" href="#">
+        <span class="user-profile"><img src="https://img.icons8.com/bubbles/50/000000/user-male.png" class="img-circle" alt="chris"></span>
+      </a>
+      <ul class="dropdown-menu dropdown-menu-right">
+       <li class="dropdown-item user-details">
+        <a href="javaScript:void();">
+           <div class="media">
+             <div class="avatar"><img class="align-self-start mr-3" src="https://img.icons8.com/bubbles/50/000000/user-male.png" alt="user avatar"></div>
+            <div class="media-body">
+            <h6 class="mt-2 user-title">chris</h6>
+            <p class="user-subtitle"><span class="__cf_email__" data-cfemail="eb88839982989c8287988485dcd3dedbab8c868a8287c5888486">[email&#160;protected]</span></p>
+            </div>
+           </div>
+          </a>
+        </li>
+        <li class="dropdown-divider"></li>
+                <li class="dropdown-item"><i class="icon-wallet mr-2"></i><a href="accountdetails.html">Withdrawal Settings</a></li>
+        <li class="dropdown-divider"></li>
+        <li class="dropdown-item"><i class="icon-user mr-2"></i> <a href="profile.html">Profile</a> </li>
+        <li class="dropdown-divider"></li>
+        <li class="dropdown-item"><i class="icon-power mr-2"></i><a href="logout.html"
+                        onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+                        Logout
+                    	</a></li>
+        <form id="logout-form" action="logout.html" method="POST" style="display: none;">
+                        <input type="hidden" name="_token" value="YZOHWbPmIw2R4UvVEMga2W6LAsksZRsna9vF3em2">
+         </form>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</header>
+<!--End topbar header-->
+		<!-- //header-ends -->
+		<!-- main content start-->
+		<div class="clearfix"></div>
+	
+  <div class="content-wrapper">
+    <div class="container-fluid">
+	
+	<br>
+	 <h4 class="text-uppercase">Available Packages</h4>
+	 <hr>
+	                 <br>
+	 <div class="row">
+	     	  <div class="col-lg-4">
+	  <div class="pricing-table pricing-table-color">
+	   <div class="card gradient-meridian">
+	    <div class="card-body text-center">
+		 <div class="price-title text-white">$500 - $999</div>
+		   <h2 class="price text-white">Basic</h2>
+		   <ul class="list-group list-group-flush">
+			
+			<li class="list-group-item"><b>Profit Between: $8000 - $14000</b></li>
+			<li class="list-group-item text-warning"><b>In Just One week</b></li>
+			<li class="list-group-item">Email Support</li>
+			<li class="list-group-item">24X7 Support</li>
+			
+			<li class="list-group-item">
+			    <form style="padding:3px;" role="form" method="post" action="">
+									    <label class="text-white">Amount:</label><br>
+                                        <input type="number" min="500" max="999" name="iamount" placeholder="$500" class="form-control">
+                                       <hr>
+            							   <br>
+
+											<input type="hidden" name="duration" value="One week">
+
+            							   <input type="hidden" name="id" value="19">
+            					   		<input type="hidden" name="_token" value="YZOHWbPmIw2R4UvVEMga2W6LAsksZRsna9vF3em2">
+            					   		<input type="submit" class="btn btn-block pricing-action btn-warning nav-pills" value="Join plan" style=" border-radius: 40px;">
+            					   </form>
+			</li>
+		  </ul>
+		  
+		</div>
+	   </div>
+	   </div>
+	  </div>
+	  
+	  				<!-- Deposit for a plan Modal -->
+				<div id="depositModal19" class="modal fade" role="dialog">
+			  <div class="modal-dialog">
+
+			    <!-- Modal content-->
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        <h4 class="modal-title" style="text-align:center;">Make a deposit of <strong>$500 to join this plan</strong></h4>
+			      </div>
+			      <div class="modal-body">
+                        <form style="padding:3px;" role="form" method="post" action="deposit.html">
+					   		<input style="padding:5px;" class="form-control" value="500" type="text" name="amount" required><br/>
+                               
+					   		<input type="hidden" name="_token" value="YZOHWbPmIw2R4UvVEMga2W6LAsksZRsna9vF3em2">
+					   		<input type="hidden" name="pay_type" value="plandeposit">
+					   		<input type="hidden" name="plan_id" value="19">
+					   		<input type="submit" class="btn btn-default" value="Continue">
+					   </form>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<!-- /deposit for a plan Modal -->
+	  	  <div class="col-lg-4">
+	  <div class="pricing-table pricing-table-color">
+	   <div class="card gradient-meridian">
+	    <div class="card-body text-center">
+		 <div class="price-title text-white">$1000 - $1999</div>
+		   <h2 class="price text-white">Bronze</h2>
+		   <ul class="list-group list-group-flush">
+			
+			<li class="list-group-item"><b>Profit Between: $15000 - $20200</b></li>
+			<li class="list-group-item text-warning"><b>In Just One week</b></li>
+			<li class="list-group-item">Email Support</li>
+			<li class="list-group-item">24X7 Support</li>
+			
+			<li class="list-group-item">
+			    <form style="padding:3px;" role="form" method="post" action="">
+									    <label class="text-white">Amount:</label><br>
+                                        <input type="number" min="1000" max="1999" name="iamount" placeholder="$1000" class="form-control">
+                                       <hr>
+            							   <br>
+
+											<input type="hidden" name="duration" value="One week">
+
+            							   <input type="hidden" name="id" value="21">
+            					   		<input type="hidden" name="_token" value="YZOHWbPmIw2R4UvVEMga2W6LAsksZRsna9vF3em2">
+            					   		<input type="submit" class="btn btn-block pricing-action btn-warning nav-pills" value="Join plan" style=" border-radius: 40px;">
+            					   </form>
+			</li>
+		  </ul>
+		  
+		</div>
+	   </div>
+	   </div>
+	  </div>
+	  
+	  				<!-- Deposit for a plan Modal -->
+				<div id="depositModal21" class="modal fade" role="dialog">
+			  <div class="modal-dialog">
+
+			    <!-- Modal content-->
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        <h4 class="modal-title" style="text-align:center;">Make a deposit of <strong>$1000 to join this plan</strong></h4>
+			      </div>
+			      <div class="modal-body">
+                        <form style="padding:3px;" role="form" method="post" action="deposit.html">
+					   		<input style="padding:5px;" class="form-control" value="1000" type="text" name="amount" required><br/>
+                               
+					   		<input type="hidden" name="_token" value="YZOHWbPmIw2R4UvVEMga2W6LAsksZRsna9vF3em2">
+					   		<input type="hidden" name="pay_type" value="plandeposit">
+					   		<input type="hidden" name="plan_id" value="21">
+					   		<input type="submit" class="btn btn-default" value="Continue">
+					   </form>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<!-- /deposit for a plan Modal -->
+	  	  <div class="col-lg-4">
+	  <div class="pricing-table pricing-table-color">
+	   <div class="card gradient-meridian">
+	    <div class="card-body text-center">
+		 <div class="price-title text-white">$2000 - $4999</div>
+		   <h2 class="price text-white">Silver</h2>
+		   <ul class="list-group list-group-flush">
+			
+			<li class="list-group-item"><b>Profit Between: $20255 - $50000</b></li>
+			<li class="list-group-item text-warning"><b>In Just One week</b></li>
+			<li class="list-group-item">Email Support</li>
+			<li class="list-group-item">24X7 Support</li>
+			
+			<li class="list-group-item">
+			    <form style="padding:3px;" role="form" method="post" action="">
+									    <label class="text-white">Amount:</label><br>
+                                        <input type="number" min="2000" max="4999" name="iamount" placeholder="$2000" class="form-control">
+                                       <hr>
+            							   <br>
+
+											<input type="hidden" name="duration" value="One week">
+
+            							   <input type="hidden" name="id" value="22">
+            					   		<input type="hidden" name="_token" value="YZOHWbPmIw2R4UvVEMga2W6LAsksZRsna9vF3em2">
+            					   		<input type="submit" class="btn btn-block pricing-action btn-warning nav-pills" value="Join plan" style=" border-radius: 40px;">
+            					   </form>
+			</li>
+		  </ul>
+		  
+		</div>
+	   </div>
+	   </div>
+	  </div>
+	  
+	  				<!-- Deposit for a plan Modal -->
+				<div id="depositModal22" class="modal fade" role="dialog">
+			  <div class="modal-dialog">
+
+			    <!-- Modal content-->
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        <h4 class="modal-title" style="text-align:center;">Make a deposit of <strong>$2000 to join this plan</strong></h4>
+			      </div>
+			      <div class="modal-body">
+                        <form style="padding:3px;" role="form" method="post" action="deposit.html">
+					   		<input style="padding:5px;" class="form-control" value="2000" type="text" name="amount" required><br/>
+                               
+					   		<input type="hidden" name="_token" value="YZOHWbPmIw2R4UvVEMga2W6LAsksZRsna9vF3em2">
+					   		<input type="hidden" name="pay_type" value="plandeposit">
+					   		<input type="hidden" name="plan_id" value="22">
+					   		<input type="submit" class="btn btn-default" value="Continue">
+					   </form>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<!-- /deposit for a plan Modal -->
+	  	  <div class="col-lg-4">
+	  <div class="pricing-table pricing-table-color">
+	   <div class="card gradient-meridian">
+	    <div class="card-body text-center">
+		 <div class="price-title text-white">$5000 - $10000</div>
+		   <h2 class="price text-white">Gold</h2>
+		   <ul class="list-group list-group-flush">
+			
+			<li class="list-group-item"><b>Profit Between: $46000 - $99720</b></li>
+			<li class="list-group-item text-warning"><b>In Just One week</b></li>
+			<li class="list-group-item">Email Support</li>
+			<li class="list-group-item">24X7 Support</li>
+			
+			<li class="list-group-item">
+			    <form style="padding:3px;" role="form" method="post" action="">
+									    <label class="text-white">Amount:</label><br>
+                                        <input type="number" min="5000" max="10000" name="iamount" placeholder="$5000" class="form-control">
+                                       <hr>
+            							   <br>
+
+											<input type="hidden" name="duration" value="One week">
+
+            							   <input type="hidden" name="id" value="23">
+            					   		<input type="hidden" name="_token" value="YZOHWbPmIw2R4UvVEMga2W6LAsksZRsna9vF3em2">
+            					   		<input type="submit" class="btn btn-block pricing-action btn-warning nav-pills" value="Join plan" style=" border-radius: 40px;">
+            					   </form>
+			</li>
+		  </ul>
+		  
+		</div>
+	   </div>
+	   </div>
+	  </div>
+	  
+	  				<!-- Deposit for a plan Modal -->
+				<div id="depositModal23" class="modal fade" role="dialog">
+			  <div class="modal-dialog">
+
+			    <!-- Modal content-->
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        <h4 class="modal-title" style="text-align:center;">Make a deposit of <strong>$5000 to join this plan</strong></h4>
+			      </div>
+			      <div class="modal-body">
+                        <form style="padding:3px;" role="form" method="post" action="deposit.html">
+					   		<input style="padding:5px;" class="form-control" value="5000" type="text" name="amount" required><br/>
+                               
+					   		<input type="hidden" name="_token" value="YZOHWbPmIw2R4UvVEMga2W6LAsksZRsna9vF3em2">
+					   		<input type="hidden" name="pay_type" value="plandeposit">
+					   		<input type="hidden" name="plan_id" value="23">
+					   		<input type="submit" class="btn btn-default" value="Continue">
+					   </form>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<!-- /deposit for a plan Modal -->
+	  	 </div><!--End Row-->
+	
+	 
+    </div>
+    <!-- End container-fluid-->
+    
+    </div><!--End content-wrapper-->
+		<!-- send all users email -->
+			<div id="sendmailModal" class="modal fade" role="dialog">
+			  <div class="modal-dialog">
+
+			    <!-- Modal content-->
+			    <div class="modal-content animated zoomIn">
+			      <div class="modal-header">
+			        
+			        <h5 class="modal-title" style="text-align:center;">This message will be sent to all your users.</h5>
+			        <button type="button" class="close" data-dismiss="modal">&times;</button>
+			      </div>
+			      <div class="modal-body">
+                        <form style="padding:3px;" role="form" method="post" action="">
+					   		
+					   		<textarea class="form-control" name="message" row="3" required=""></textarea><br/>
+                               
+					   		<input type="hidden" name="_token" value="YZOHWbPmIw2R4UvVEMga2W6LAsksZRsna9vF3em2">
+					   		<div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Send</button>
+                      </div>
+					   </form>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<!-- /send all users email Modal -->
+			
+			
+			<!-- Deposit Modal -->
+			<div id="depositModal" class="modal fade" role="dialog">
+			  <div class="modal-dialog">
+
+			    <!-- Modal content-->
+			    <div class="modal-content animated zoomIn">
+			      <div class="modal-header">
+			        
+			        <h5 class="modal-title" style="text-align:center;">Make new deposit</h5><button type="button" class="close" data-dismiss="modal">&times;</button>
+			      </div>
+			      <div class="modal-body">
+                        <form style="padding:3px;" role="form" method="post" action="deposit.html">
+					   		<input style="padding:5px;" class="form-control" placeholder="Enter amount here" type="text" name="amount" required><br/>
+                               
+					   		<input type="hidden" name="_token" value="YZOHWbPmIw2R4UvVEMga2W6LAsksZRsna9vF3em2">
+					   		<div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Continue</button>
+                      </div>
+					   </form>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<!-- /deposit Modal -->
+			
+			
+			<!-- Withdrawal method Modal -->
+			<div id="wmethodModal" class="modal fade" role="dialog">
+			  <div class="modal-dialog">
+
+			    <!-- Modal content-->
+			    <div class="modal-content animated zoomIn">
+			      <div class="modal-header">
+			        
+			        <h5 class="modal-title" style="text-align:center;">Add new withdrawal method</h5><button type="button" class="close" data-dismiss="modal">&times;</button>
+			      </div>
+			      <div class="modal-body">
+                        <form style="padding:3px;" role="form" method="post" action="">
+					   		<input style="padding:5px;" class="form-control" placeholder="Enter method name" type="text" name="name" required><br/>
+					   		<input style="padding:5px;" class="form-control" placeholder="Minimum amount $" type="text" name="minimum" required><br/>
+					   		<input style="padding:5px;" class="form-control" placeholder="Maximum amount $" type="text" name="maximum" required><br/>
+					   		<input style="padding:5px;" class="form-control" placeholder="Charges (Fixed amount $)" type="text" name="charges_fixed" required><br/>
+					   		<input style="padding:5px;" class="form-control" placeholder="Charges (Percentage %)" type="text" name="charges_percentage" required><br/>
+					   		<input style="padding:5px;" class="form-control" placeholder="Payout duration" type="text" name="duration" required><br/>
+					   		<select name="status" class="form-control">
+					   		    <option value="">Select action</option> 
+					   		    <option value="enabled">Enable</option> 
+					   		    <option value="disabled">Disable</option> 
+					   		</select><br/>
+                             <input type="hidden" name="type" value="withdrawal">
+					   		<input type="hidden" name="_token" value="YZOHWbPmIw2R4UvVEMga2W6LAsksZRsna9vF3em2">
+					   		<div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Contine</button>
+                      </div>
+					   </form>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<!-- /withdrawal method Modal -->
+
+
+            			<!-- Withdrawal Modal -->
+			<div id="withdrawalModal" class="modal fade" role="dialog">
+			  <div class="modal-dialog">
+
+			    <!-- Modal content-->
+			    <div class="modal-content animated zoomIn">
+			      <div class="modal-header">
+			       
+			        <h5 class="modal-title" style="text-align:center;">Payment will be sent to your recieving address.</h5> <button type="button" class="close" data-dismiss="modal">&times;</button>
+			      </div>
+			      <div class="modal-body">
+                        <form style="padding:3px;" role="form" method="post" action="withdrawal.html">
+					   		<input style="padding:5px;" class="form-control" placeholder="Enter amount here" type="text" name="amount" required><br/>
+                               
+					   		<input type="hidden" name="_token" value="YZOHWbPmIw2R4UvVEMga2W6LAsksZRsna9vF3em2">
+					   		<div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Submit</button>
+                      </div>
+					   </form>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<!-- /Withdrawals Modal -->
+
+			       			<!-- Plans Modal -->
+			<div id="plansModal" class="modal fade" role="dialog">
+			  <div class="modal-dialog">
+
+			    <!-- Modal content-->
+			    <div class="modal-content animated zoomIn">
+			      <div class="modal-header">
+			        
+			        <h5 class="modal-title" style="text-align:center;">Add new plan / package</h5><button type="button" class="close" data-dismiss="modal">&times;</button>
+			      </div>
+			      <div class="modal-body">
+              <form style="padding:3px;" role="form" method="post" action="">
+							<label>Plan name</label><br/>	
+							<input style="padding:5px;" class="form-control" placeholder="Enter Plan name" type="text" name="name" required><br/>
+								 <label>Plan price</label><br/>
+								 <input style="padding:5px;" class="form-control" placeholder="Enter Plan price" type="text" name="price" required><br/>
+								 <label>Plan MIN. price</label><br/>		 
+            					  <input style="padding:5px;" placeholder="Enter Plan minimum price" class="form-control" type="text" name="min_price" required><br/>
+            					  <label>Plan MAX. price</label><br/>		 
+								  <input style="padding:5px;" class="form-control" placeholder="Enter Plan maximum price" type="text" name="max_price" required><br/>
+								  <label>Minimum return</label><br/>
+								<input style="padding:5px;" class="form-control" placeholder="Enter minimum return" type="text" name="minr" required><br/>
+								<label>Maximum return</label><br/>
+								<input style="padding:5px;" class="form-control" placeholder="Enter maximum return" type="text" name="maxr" required><br/>
+								<label>Gift Bonus</label><br/>
+								<input style="padding:5px;" class="form-control" placeholder="Enter Additional Gift Bonus" type="text" name="gift" required><br/>	
+								 <label>Plan expected return (ROI)</label><br/>
+								 <input style="padding:5px;" class="form-control" placeholder="Enter expected return for this plan" type="text" name="return" required><br/>
+								 					 
+								<label>top up interval</label><br/>
+                               <select class="form-control" name="t_interval">
+									<option>Monthly</option>
+									<option>Weekly</option>
+									<option>Daily</option>
+									<option>Hourly</option>
+								</select><br>
+								 <label>top up type</label><br/>
+                               <select class="form-control" name="t_type">
+																		<option>Percentage</option>
+																		<option>Fixed</option>
+															 </select><br>
+															 <label>top up amount (in % or $ as specified above)</label><br/>
+															 <input style="padding:5px;" class="form-control" placeholder="top up amount" type="text" name="t_amount" required><br/>
+															 <label>Investment duration</label><br/>
+                               <select class="form-control" name="expiration">
+																		<option>One week</option>
+																		<option>One month</option>
+																	<option>Three months</option>	
+																		<option>Six months</option>
+																		<option>One year</option>
+															 </select><br>
+					   		<input type="hidden" name="_token" value="YZOHWbPmIw2R4UvVEMga2W6LAsksZRsna9vF3em2">
+					   		<div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Submit</button>
+                      </div>
+					   </form>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<!-- /plans Modal -->
+
+			<!-- settings update Modal 
+			<div id="s_updModal" class="modal fade" role="dialog">
+			  <div class="modal-dialog">
+
+			    
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        <h4 class="modal-title" style="text-align:center;">This settings page was last updated by</h4>
+			      </div>
+			      <div class="modal-body">
+                        <h3>Admin</h3>
+                        
+                        <h4 class="modal-title" style="text-align:center;">Date/Time</h4>
+                        
+                        <h3>2020-04-16 14:01:46</h3>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			 settings update Modal -->
+		<!--Start Back To Top Button-->
+    <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
+    <!--End Back To Top Button-->
+	<!--Start footer-->
+	<footer class="footer">
+      <div class="container">
+        <div class="text-center">
+          Copyright &copy; Birexoption 2020        </div>
+      </div>
+    </footer>
+	<!--End footer-->
+  </div><!--End wrapper-->
+  <!-- Bootstrap core JavaScript-->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="../rocker/color-version/assets/js/jquery.min.js"></script>
+  <script src="../rocker/color-version/assets/js/popper.min.js"></script>
+  <script src="../rocker/color-version/assets/js/bootstrap.min.js"></script>
+  <!-- simplebar js -->
+  <script src="../rocker/color-version/assets/plugins/simplebar/js/simplebar.js"></script>
+  <!-- waves effect js -->
+  <script src="../rocker/color-version/assets/js/waves.js"></script>
+  <!-- sidebar-menu js -->
+  <script src="../rocker/color-version/assets/js/sidebar-menu.js"></script>
+    <!-- Custom scripts -->
+  <script src="../rocker/color-version/assets/js/app-script.js"></script>
+  <!--Switchery Js-->
+    <script src="../rocker/color-version/assets/plugins/switchery/js/switchery.min.js"></script>
+    <script>
+      var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
+      $('.js-switch').each(function() {
+            new Switchery($(this)[0], $(this).data());
+       });
+    </script>
+
+    <!--Bootstrap Switch Buttons-->
+    <script src="../rocker/color-version/assets/plugins/bootstrap-switch/bootstrap-switch.min.js"></script>
+    <script>
+    $(".bt-switch input[type='checkbox'], .bt-switch input[type='radio']").bootstrapSwitch();
+    var radioswitch = function() {
+        var bt = function() {
+            $(".radio-switch").on("switch-change", function() {
+                $(".radio-switch").bootstrapSwitch("toggleRadioState")
+            }), $(".radio-switch").on("switch-change", function() {
+                $(".radio-switch").bootstrapSwitch("toggleRadioStateAllowUncheck")
+            }), $(".radio-switch").on("switch-change", function() {
+                $(".radio-switch").bootstrapSwitch("toggleRadioStateAllowUncheck", !1)
+            })
+        };
+        return {
+            init: function() {
+                bt()
+            }
+        }
+    }();
+    $(document).ready(function() {
+        radioswitch.init()
+    });
+    </script>
+  <!-- Vector map JavaScript -->
+  <script src="../rocker/color-version/assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js"></script>
+  <script src="../rocker/color-version/assets/plugins/vectormap/jquery-jvectormap-world-mill-en.js"></script>
+  <!-- Chart js -->
+  <script src="../rocker/color-version/assets/plugins/Chart-js/Chart.min.js"></script>
+  <!-- Index js -->
+  <script src="../rocker/color-version/assets/js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!-- Input Field Starts
+<?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is already logged in, if yes then redirect him to welcome page
+if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+    header("location: account/index.php");
+    exit;
+}
+ 
+// Include config file
+require_once "config.php";
+// Function defnition 
+function function_alert($message) { 
+      
+    // Display the alert box  
+    echo "<script>alert('$message');</script>"; 
+}  
+// Define variables and initialize with empty values
+$email = $password = "";
+$email_err = $password_err = "";
+ 
+// Processing form data when form is submitted
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+ 
+    // Check if email is empty
+    if(empty(trim($_POST["email"]))){
+        $email_err = "Please enter email.";
+        function_alert("Please enter email.");
+    } else{
+        $email = trim($_POST["email"]);
+    }
+    
+    // Check if password is empty
+    if(empty(trim($_POST["password"]))){
+        $password_err = "Please enter your password.";
+        function_alert("Please enter your Password.");
+    } else{
+        $password = trim($_POST["password"]);
+    }
+    
+    // Validate credentials
+    if(empty($email_err) && empty($password_err)){
+        // Prepare a select statement
+        $sql = "SELECT id, email, password FROM users WHERE email = ?";
+        
+        if($stmt = mysqli_prepare($link, $sql)){
+            // Bind variables to the prepared statement as parameters
+            mysqli_stmt_bind_param($stmt, "s", $param_email);
+            
+            // Set parameters
+            $param_email = $email;
+            
+            // Attempt to execute the prepared statement
+            if(mysqli_stmt_execute($stmt)){
+                // Store result
+                mysqli_stmt_store_result($stmt);
+                
+                // Check if email exists, if yes then verify password
+                if(mysqli_stmt_num_rows($stmt) == 1){                    
+                    // Bind result variables
+                    mysqli_stmt_bind_result($stmt, $id, $email, $hashed_password);
+                    if(mysqli_stmt_fetch($stmt)){
+                        if(password_verify($password, $hashed_password)){
+                            // Password is correct, so start a new session
+                            session_start();                       
+                            // Store data in session variables
+                            $_SESSION["loggedin"] = true;
+                            $_SESSION["id"] = $id;                
+                            $_SESSION["email"] = $email;
+                                     
+                            // Redirect user to welcome page
+                            header("location: account/index.php");
+                        } else{
+                            // Display an error message if password is not valid
+                            $password_err = "The password you entered was not valid.";
+                            function_alert("The password you entered was not valid.");
+                        }
+                    }
+                } else{
+                    // Display an error message if email doesn't exist
+                    $email_err = "No account found with that email.";
+                    function_alert("No account found with that email.");
+                }
+            } else{
+                echo "Oops! Something went wrong. Please try again later.";
+            }
+        }
+        
+        // Close statement
+        mysqli_stmt_close($stmt);
+    }
+    
+    // Close connection
+    mysqli_close($link);
+}
+?>
+
+
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from Birexoption.com/login by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 12 Aug 2020 11:15:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="eJraVqxTeJgBnfsWVLryaIgJKCCtQd35XgKQ6nKT">
+
+    <meta charset="utf-8" />
+    <title>Birexoption | Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="home/home/images/favicon.png">
+
+    <!-- Template CSS Files -->
+    <link rel="stylesheet" href="home/home/css/font-awesome.min.css">
+    <link rel="stylesheet" href="home/home/css/bootstrap.min.css">
+    <link rel="stylesheet" href="home/home/css/magnific-popup.css">
+    <link rel="stylesheet" href="home/home/css/select2.min.css">
+    <link rel="stylesheet" href="home/home/css/style.css">
+	<link rel="stylesheet" href="home/home/css/skins/blue.css">
+	
+	<!-- Live Style Switcher - demo only -->
+    <link rel="alternate stylesheet" type="text/css" title="orange" href="home/home/css/skins/orange.html" />
+    <link rel="alternate stylesheet" type="text/css" title="green" href="home/home/css/skins/green.css" />
+    <link rel="alternate stylesheet" type="text/css" title="blue" href="home/home/css/skins/blue.css" />
+    <link rel="stylesheet" type="text/css" href="home/home/css/styleswitcher.css" />
+
+    <!-- Template JS Files -->
+    <script src="home/home/js/modernizr.js"></script>
+
+</head>	
+<script src="../ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<body class="auth-page" style="background-color:#5C14CB;">
+	
+    <!-- Wrapper Starts -->
+    <div class="wrapper">
+        <div class="container user-auth" style="padding:40px;">
+			<div class="row">
+			<div class="col-sm-5 col-sm-offset-4 col-md-offset-4 col-lg-offset-4 col-md-5 col-lg-5" style="background:#5C14CB; padding:40px;">
+				<!-- Logo Starts -->
+				<div style="text-align:center;">
+				<a href="index.html">
+			 		   <span style="color:#fff; font-weight:bold; font-size: 28px;">Birexoption</span>
+				</a>
+				</div>
+				<!-- Logo Ends -->
+				
+																
+				
+				<div class="form-container">
+					<div>
+						<!-- Section Title Starts -->
+						<div class="row text-center">
+							<h3 class="text-center" style="font-size:1.5em;">Member Login</h3><br>
+						</div>
+						<!-- Section Title Ends -->
+						<!-- Form Starts -->
+						<form  class="form-horizontal" method="POST" action="https://Birexoption.com/login">
+							<input type="hidden" name="_token" value="eJraVqxTeJgBnfsWVLryaIgJKCCtQd35XgKQ6nKT">	
+							
+						<!-- Input Field Starts -->
+							<div class="form-group">
+															<input style="background-color:#fff; color:#3276B1;" class="form-control" name="email" id="email" placeholder="ENTER YOUR EMAIL" name="email" type="email" value="" required autofocus>
+                            
+                               
+                            </div>
+							<!-- Input Field Ends -->
+							<!-- Input Field Starts -->
+							<div class="form-group">
+                                								<input style="background-color:#fff; color:#3276B1;" class="form-control" id="password" name="password" id="password" placeholder="ENTER PASSWORD" type="password" required>
+								<input name="status"  type="hidden" value="active">
+							</div>
+							<!-- Input Field Ends -->
+							<!-- Submit Form Button Starts -->
+							<div class="form-group">
+								<button class="btn btn-warning" type="submit">login</button>
+								<a href="password/reset.html">Forgot Your Password?</a>
+
+								<p class="text-center">Don't have an account?  <a href="register.html">register now</a></p>
+							</div>
+							<!-- Submit Form Button Ends -->
+                        </form>
+                        
+						<!-- Form Ends -->
+					</div>
+				</div>
+				<!-- Copyright Text Starts -->
+				<p class="text-center copyright-text">Copyright © 2019 Birexoption All Rights Reserved</p>
+				<!-- Copyright Text Ends -->
+			</div>
+			</div>
+		</div>
+    </div>
+    <!-- Wrapper Ends -->
+</body>
+
+
+<!-- Mirrored from Birexoption.com/login by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 12 Aug 2020 11:15:29 GMT -->
+</html>
